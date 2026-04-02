@@ -73,7 +73,7 @@ def convert_single_file(uploaded_file):
 # -------------------------------------------------
 # ✅ Streamlit UI
 # -------------------------------------------------
-st.title("📄 SAP → JPMorgan File Converter (Download ZIP Version)")
+st.title("📄 SAP to JPMorgan File Converter")
 
 uploaded_files = st.file_uploader(
     "Upload SAP files (.xls or .xlsx)",
