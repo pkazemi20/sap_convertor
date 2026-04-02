@@ -6,6 +6,26 @@ import io
 import zipfile
 
 
+def login():
+    st.title("🔐 Login")
+    
+    username = st.text_input("Username")
+    password = st.text_input("Password", type="password")
+
+    if st.button("Login"):
+        if username in st.secrets["USERS"]:
+            idx = st.secrets["USERS"].index(username)
+            if password == st.secrets["PASSWORDS"][idx]:
+                st.session_state.authenticated = True
+                st.rerun()
+        st.error("❌ Invalid username or password")
+
+if "authenticated" not in st.session_state:
+    st.session_state.authenticated = False
+
+if not st.session_state.authenticated:
+    login()
+    st.stop()
 # -------------------------------------------------
 # ✅ Conversion Function (same transformation logic as before)
 # -------------------------------------------------
