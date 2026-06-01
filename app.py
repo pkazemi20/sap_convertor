@@ -150,7 +150,7 @@ def convert_single_file(uploaded_file, currency):
 
     # Constants
     jp.iloc[1:1+n, 10] = "GIR"
-    jp.iloc[1:1+n, 11] = "1"
+    jp.iloc[1:1+n, 11] = "01"
     jp.iloc[1:1+n, 12] = 99
     jp.iloc[1:1+n, 13] = 76904122
 
